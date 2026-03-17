@@ -139,45 +139,6 @@ export const getConnectedAccounts = async (
       "platform accountName profileData createdAt expiresAt lastSyncedAt",
     );
 
-    // Return sample data if no accounts connected
-    if (accounts.length === 0) {
-      const sampleData = [
-        {
-          platform: "facebook",
-          accountName: "John Doe Facebook",
-          profilePicture: "https://via.placeholder.com/150?text=Facebook",
-          followers: 1250,
-          verified: true,
-          connectedAt: new Date(Date.now() - 7 * 24 * 60 * 60 * 1000),
-          expiresAt: new Date(Date.now() + 30 * 24 * 60 * 60 * 1000),
-          lastSyncedAt: new Date(),
-        },
-        {
-          platform: "instagram",
-          accountName: "john.doe.insta",
-          profilePicture: "https://via.placeholder.com/150?text=Instagram",
-          followers: 5420,
-          verified: true,
-          connectedAt: new Date(Date.now() - 14 * 24 * 60 * 60 * 1000),
-          expiresAt: new Date(Date.now() + 45 * 24 * 60 * 60 * 1000),
-          lastSyncedAt: new Date(Date.now() - 2 * 60 * 60 * 1000),
-        },
-        {
-          platform: "tiktok",
-          accountName: "johndoe_tiktok",
-          profilePicture: "https://via.placeholder.com/150?text=TikTok",
-          followers: 12800,
-          verified: false,
-          connectedAt: new Date(Date.now() - 30 * 24 * 60 * 60 * 1000),
-          expiresAt: new Date(Date.now() + 60 * 24 * 60 * 60 * 1000),
-          lastSyncedAt: new Date(Date.now() - 1 * 60 * 60 * 1000),
-        },
-      ];
-
-      res.status(200).json({ accounts: sampleData });
-      return;
-    }
-
     res.status(200).json({
       accounts: accounts.map((acc) => ({
         platform: acc.platform,

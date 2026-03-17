@@ -174,7 +174,8 @@ export const getDashboardStats = async (
           userId: userId,
           accountId: connectedAccounts[0]?._id?.toString() || "sample_1",
           platform: "instagram",
-          content: "Check out our latest product launch! 🚀 Excited to share this with everyone.",
+          content:
+            "Check out our latest product launch! 🚀 Excited to share this with everyone.",
           scheduledTime: new Date(Date.now() + 2 * 24 * 60 * 60 * 1000),
           status: "scheduled",
           engagement: {
@@ -188,7 +189,8 @@ export const getDashboardStats = async (
           userId: userId,
           accountId: connectedAccounts[1]?._id?.toString() || "sample_2",
           platform: "facebook",
-          content: "Join us for an exclusive webinar next week. Limited spots available!",
+          content:
+            "Join us for an exclusive webinar next week. Limited spots available!",
           scheduledTime: new Date(Date.now() + 4 * 24 * 60 * 60 * 1000),
           status: "scheduled",
           engagement: {
@@ -287,7 +289,8 @@ export const getUpcomingPosts = async (
           id: "post_1",
           accountId: "account_fb_123",
           platform: "instagram" as const,
-          content: "Check out our latest product launch! 🚀 Excited to share this with everyone.",
+          content:
+            "Check out our latest product launch! 🚀 Excited to share this with everyone.",
           scheduledTime: new Date(Date.now() + 2 * 24 * 60 * 60 * 1000),
           status: "scheduled" as const,
           engagement: {
@@ -300,7 +303,8 @@ export const getUpcomingPosts = async (
           id: "post_2",
           accountId: "account_fb_456",
           platform: "facebook" as const,
-          content: "Join us for an exclusive webinar next week. Limited spots available!",
+          content:
+            "Join us for an exclusive webinar next week. Limited spots available!",
           scheduledTime: new Date(Date.now() + 4 * 24 * 60 * 60 * 1000),
           status: "scheduled" as const,
           engagement: {
