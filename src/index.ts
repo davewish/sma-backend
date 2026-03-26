@@ -8,6 +8,7 @@ import userRoutes from "./routes/userRoutes";
 import authRoutes from "./routes/authRoutes";
 import socialRoutes from "./routes/socialRoutes";
 import dashboardRoutes from "./routes/dashboardRoutes";
+import postRoutes from "./routes/postRoutes";
 import { errorHandler } from "./middleware/errorHandler";
 
 dotenv.config();
@@ -37,6 +38,9 @@ app.use("/api/social", socialRoutes);
 
 // Dashboard routes
 app.use("/api/dashboard", dashboardRoutes);
+
+// Post routes
+app.use("/api/posts", postRoutes);
 
 // User routes
 app.use("/api/users", userRoutes);
